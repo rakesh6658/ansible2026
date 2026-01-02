@@ -3,4 +3,4 @@
   tasks:
   - name: printing ansible facts
     ansible.builtin.debug:
-     msg: "facts about os is {{ansible_gather_facts}}"
+     msg: "facts about os is {{ansible_facts}}"
