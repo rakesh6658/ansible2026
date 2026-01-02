@@ -1,0 +1,10 @@
+- name: loops in ansible
+  hosts: localhost
+  tasks:
+  - name: printing loops in ansible
+    ansible.builtin.debug:
+     msg: "{{item}}"
+    loop:
+    - hyd
+    - banglore
+    - chennai  
