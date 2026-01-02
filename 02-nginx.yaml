@@ -1,8 +1,8 @@
-- name: installing nginx
+- name: installing and start nginx
   hosts: frontend
   become: yes
   tasks:
-  - name: installing nginx
+  - name: installing nginx 
     ansible.builtin.dnf:
     name: nginx
     state: latest
