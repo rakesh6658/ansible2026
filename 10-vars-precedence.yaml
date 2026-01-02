@@ -1,7 +1,7 @@
 - name: precedence of variables
   hosts: frontend
-  vars:
-   - name1: playlevel
+  # vars:
+  #  - name1: playlevel
   # vars_files:
   # - details.yaml
   # vars_prompt:
@@ -18,3 +18,4 @@
 #02-task-level
 #03-var_file
 #04-vars_prompt
+#05-playlevel
