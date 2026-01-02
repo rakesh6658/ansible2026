@@ -1,5 +1,5 @@
 - name: conditions in yaml
-  hosts: local
+  hosts: localhost
   vars:
    number: "15"
   tasks:
