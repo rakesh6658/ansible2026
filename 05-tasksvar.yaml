@@ -1,0 +1,11 @@
+- name: tasklevel variables
+  hosts: frontend
+  tasks:
+  - name: printing tasklevel variables
+    vars:
+     name: santosh
+     city: chennai
+     pincode: 573738
+    ansible.builtin.debug:
+     msg: "my name is {{ name }} and lives in {{city}}, pincode is {{pincode}}"
+
