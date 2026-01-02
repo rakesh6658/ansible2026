@@ -1,0 +1,16 @@
+- name: precedence of variables
+  hosts: frontend
+  vars:
+   - name1: playlevel
+  vars_files:
+  - details.yaml
+  vars_prompt:
+  - name: name1
+    prompt: enter your name
+    private: no
+  tasks:
+  - name: printing variables from precedence
+    vars:
+     - name1: tasklevel
+    ansible.builtin.debug:
+     msg: "my name is {{ name1 }}"   
