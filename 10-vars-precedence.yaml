@@ -4,10 +4,10 @@
    - name1: playlevel
   # vars_files:
   # - details.yaml
-  vars_prompt:
-  - name: name1
-    prompt: enter your name
-    private: no
+  # vars_prompt:
+  # - name: name1
+  #   prompt: enter your name
+  #   private: no
   tasks:
   - name: printing variables from precedence
     # vars:
@@ -16,4 +16,5 @@
      msg: "my name is {{ name1 }}"   
 #01-args
 #02-task-level
-#03-var_files
+#03-var_file
+#04-vars_prompt
