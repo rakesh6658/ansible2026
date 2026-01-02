@@ -4,7 +4,7 @@
   tasks:
   - name: installing nginx mysql zip through  loops in ansible
     ansible.builtin.package:
-     name: {{ item }}
+     name: "{{ item }}"
      state: present
   loop:
     - nginx
