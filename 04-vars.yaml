@@ -1,0 +1,10 @@
+- name: variables in ansible
+  hosts: frontend
+  vars:
+   name: santosh
+   city: chennai
+   pincode: 552278
+  tasks:
+  - name: printing the variables
+    ansible.builtin.debug:
+     msg: "my name is {{ name }} and lives in {{city}}, pincode is {{pincode}}" 
