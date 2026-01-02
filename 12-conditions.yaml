@@ -1,0 +1,9 @@
+- name: conditions in yaml
+  hosts: local
+  vars:
+   number: 15
+  tasks:
+  - name: executing conditions
+    ansible.builtin.debug:
+     msg: "{{number}} is greater than 10"
+    when: number > 10   
