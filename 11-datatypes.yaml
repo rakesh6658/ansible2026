@@ -4,14 +4,14 @@
    - city: hyd
      number: 12
      requires: true
-  cities:
-   - hyd
-   - chennai
-   - bang
-  address:
-   street: gopal nagar
-   pincode: 727678
-   tasks:
+     cities:
+      - hyd
+      - chennai
+      - bang
+     address:
+      street: gopal nagar
+      pincode: 727678
+  tasks:
    - name: printing datatypes
      ansible.builtin.debug:
       msg: "i am living in {{city}} number is {{12}} {{requires}} {{cities}} {{address}}"
