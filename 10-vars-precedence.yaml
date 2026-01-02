@@ -10,7 +10,9 @@
     private: no
   tasks:
   - name: printing variables from precedence
-    vars:
-     - name1: tasklevel
+    # vars:
+    #  - name1: tasklevel
     ansible.builtin.debug:
      msg: "my name is {{ name1 }}"   
+#01-args
+#02-task-level
