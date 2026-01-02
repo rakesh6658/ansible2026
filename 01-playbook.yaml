@@ -1,0 +1,6 @@
+- name: "ping the server"
+  hosts: localhost
+  tasks:
+  - name: Example from an Ansible Playbook ping
+    ansible.builtin.ping: 
+
