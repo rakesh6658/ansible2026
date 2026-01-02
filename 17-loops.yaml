@@ -1,0 +1,12 @@
+- name: installing through loops in ansible
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: installing nginx mysql zip through  loops in ansible
+    ansible.builtin.package:
+     name: "{{ item.name }}"
+     state: "{{item.state}}"
+    loop:
+     - { name: 'nginx', state: 'latest'}
+     - { name: 'mysql', state: 'absent'}
+     - { name: 'zip', state: 'absent'} 
