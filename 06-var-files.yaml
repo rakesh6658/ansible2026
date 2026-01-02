@@ -1,0 +1,9 @@
+- name: var-files
+  hosts: frontend
+  connection: local
+  vars_files:
+   - details.yaml
+  tasks:
+  - name: printing variables from files
+    ansible.builtin.debug:
+     msg: "my name is {{ name }} and lives in {{city}}, pincode is {{pincode}}"  
