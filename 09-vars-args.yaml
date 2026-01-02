@@ -1,0 +1,6 @@
+- name: vars from arguuments
+  hosts: frontend
+  tasks:
+  - name: printing variables from arguments
+    ansible.builtin.debug:
+     msg: "my name is {{ name }} and lives in {{city}}, pincode is {{pincode}}"   
