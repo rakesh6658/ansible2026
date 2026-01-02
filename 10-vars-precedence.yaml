@@ -2,8 +2,8 @@
   hosts: frontend
   vars:
    - name1: playlevel
-  vars_files:
-  - details.yaml
+  # vars_files:
+  # - details.yaml
   vars_prompt:
   - name: name1
     prompt: enter your name
@@ -16,3 +16,4 @@
      msg: "my name is {{ name1 }}"   
 #01-args
 #02-task-level
+#03-var_files
