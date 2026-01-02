@@ -1,0 +1,6 @@
+- name: vars_inventory
+  hosts: frontend
+  tasks:
+  - name: printing variables from vars_inventory
+    ansible.builtin.debug:
+     msg: "my name is {{ name }} and lives in {{city}}, pincode is {{pincode}}"   
