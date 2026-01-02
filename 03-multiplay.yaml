@@ -1,0 +1,22 @@
+- name: multiplay-01
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: installing nginx
+    ansible.builtin.package:
+     name: nginx
+     state: present
+  - name: starting nginx
+    ansible.builtin.service:
+     name: nginx
+     state: started
+- name: multiplay-02
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: printing random text
+    ansible.builtin.debug:
+      msg: "welcome to Playbook"
+     
+     
+     
