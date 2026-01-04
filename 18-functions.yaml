@@ -7,6 +7,13 @@
     city: hyd
     street: lakdikapul
     pincode: 539379 
+   listtags:
+    - key: city
+      value: hyd
+    - key: street
+      value: lakdikapul
+    - key: pincode
+      value: 539379     
   tasks:
   - name: creating default variable
     ansible.builtin.debug:
@@ -16,4 +23,7 @@
      msg: "{{technologies | split(',')}}"  
   - name: convert map to list
     ansible.builtin.debug:
-     msg: "{{address | dict2items}}"    
+     msg: "{{address | dict2items}}"
+  - name: convert list to map
+    ansible.builtin.debug:
+     msg: "{{address | items2dict}}"       
