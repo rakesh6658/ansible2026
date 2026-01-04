@@ -9,7 +9,8 @@
   - name: printing the output
     ansible.builtin.debug:
      msg: "{{output}}" 
-  # - name: creating user by checking
-  #   ansible.builtin.user:
-  #    name: roboshop         
+  - name: creating user by checking
+    ansible.builtin.user:
+     name: roboshop 
+    when: output.rc != 0         
 
