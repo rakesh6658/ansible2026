@@ -4,7 +4,7 @@
   vars:
    city: hyderabd
    street: LBNAGAR
-   ip_addr: 167.22.22.22.22
+   ip_addr: 167.22.22.22
    technologies: devops,linux,shell,aws
    address:
     city: hyd
