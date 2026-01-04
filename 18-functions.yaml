@@ -1,0 +1,7 @@
+- name: Functions or filters in ansible
+  hosts: local
+  connection: local
+  tasks:
+  - name: creating default variable
+    ansible.builtin.debug:
+     msg: "{{name}}"
