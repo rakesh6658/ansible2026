@@ -3,10 +3,17 @@
   connection: local
   vars:
    technologies: devops,linux,shell,aws
+   address:
+    city: hyd
+    street: lakdikapul
+    pincode: 539379 
   tasks:
   - name: creating default variable
     ansible.builtin.debug:
      msg: "{{name | default('ram')  }}"
-  - name: creating string to list
+  - name: convert string to list
     ansible.builtin.debug:
-     msg: "{{technologies | split(',')}}"   
+     msg: "{{technologies | split(',')}}"  
+  - name: convert map to list
+    ansible.builtin.debug:
+     msg: "{{address | dict2items}}"    
