@@ -26,4 +26,7 @@
      msg: "{{address | dict2items}}"
   - name: convert list to map
     ansible.builtin.debug:
-     msg: "{{listtags | items2dict}}"       
+     msg: "{{listtags | items2dict}}"  
+  - name: read yaml and take it into variable
+    ansible.builtin.set_fact:
+     student_var: "{{ lookup('template', 'student.yml') | ansible.builtin.from_yaml }}"        
