@@ -1,7 +1,12 @@
 - name: Functions or filters in ansible
   hosts: localhost
   connection: local
+  vars:
+   technologies: devops,linux,shell,aws
   tasks:
   - name: creating default variable
     ansible.builtin.debug:
      msg: "{{name | default('ram')  }}"
+  - name: creating string to list
+    ansible.builtin.debug:
+     msg: "{{technologies | split(',')}}"   
