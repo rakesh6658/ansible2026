@@ -26,4 +26,4 @@
      msg: "{{address | dict2items}}"
   - name: convert list to map
     ansible.builtin.debug:
-     msg: "{{address | items2dict}}"       
+     msg: "{{listtags | items2dict}}"       
