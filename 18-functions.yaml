@@ -2,6 +2,7 @@
   hosts: localhost
   connection: local
   vars:
+   city: hyderabd
    technologies: devops,linux,shell,aws
    address:
     city: hyd
@@ -39,4 +40,7 @@
   - name: save json to file
     ansible.builtin.copy:
      content: "{{student_var | to_nice_json}}"
-     dest: "./student_data.json"            
+     dest: "./student_data.json" 
+  - name: convert to upper_case
+    ansible.builtin.debug:
+     msg: "{{city|upper}}"
