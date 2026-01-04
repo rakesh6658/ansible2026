@@ -3,6 +3,7 @@
   connection: local
   vars:
    city: hyderabd
+   street: LBNAGAR
    technologies: devops,linux,shell,aws
    address:
     city: hyd
@@ -44,3 +45,6 @@
   - name: convert to upper_case
     ansible.builtin.debug:
      msg: "{{city|upper}}"
+  - name: convert to lower_case
+    ansible.builtin.debug:
+     msg: "{{street|lower}}"
