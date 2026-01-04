@@ -35,4 +35,8 @@
   #    msg: "{{student_var}}"  
   - name: converting yaml to json
     ansible.builtin.debug:
-     msg: "{{student_var | to_nice_json}}"         
+     msg: "{{student_var | to_json}}" 
+  - name: save json to file
+    ansible.builtin.copy:
+     content: "{{student_var | to_nice_json}}"
+     dest: "./student_data.json"            
