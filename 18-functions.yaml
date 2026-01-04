@@ -4,6 +4,7 @@
   vars:
    city: hyderabd
    street: LBNAGAR
+   ip_addr: 167.22.22.22.22
    technologies: devops,linux,shell,aws
    address:
     city: hyd
@@ -15,7 +16,8 @@
     - key: street
       value: lakdikapul
     - key: pincode
-      value: 539379     
+      value: 539379 
+
   tasks:
   - name: creating default variable
     ansible.builtin.debug:
@@ -48,3 +50,8 @@
   - name: convert to lower_case
     ansible.builtin.debug:
      msg: "{{street|lower}}"
+  - name: checking ip4 address
+    ansible.builtin.debug:
+     msg: "{{ip_addr | ansible.utils.ip4}}"
+   
+
