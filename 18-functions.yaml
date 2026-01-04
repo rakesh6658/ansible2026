@@ -29,4 +29,4 @@
      msg: "{{listtags | items2dict}}"  
   - name: read yaml and take it into variable
     ansible.builtin.set_fact:
-     student_var: "{{ lookup('template', 'student.yml') | ansible.builtin.from_yaml }}"        
+     student_var: "{{ lookup('file', 'student.yml') | ansible.builtin.from_yaml }}"        
